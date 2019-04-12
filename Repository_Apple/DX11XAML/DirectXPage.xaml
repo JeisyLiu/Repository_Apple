@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="DX11XAML_Orient_App.DirectXPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DX11XAML_Orient_App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <SwapChainPanel x:Name="swapChainPanel">
+        <StackPanel>
+            <TextBlock FontSize="43" Foreground="Blue" FontStyle="Italic">Translate</TextBlock>
+            <Button Click="Btn1" Foreground="Red" FontSize="40" HorizontalAlignment="Center">Set rotating speed</Button>
+            <RelativePanel>
+                <Rectangle Fill="LawnGreen" Height="66" HorizontalAlignment="Stretch" Margin="0,0,-295.8,0" VerticalAlignment="Stretch"/>
+                <TextBlock FontSize="40" FontWeight="ExtraBold" Margin="0,0,-8.8,0" Height="66">Rotating speed:</TextBlock>
+                <TextBox TextChanged="RotateSpeed_TextChanged" Name="RotateSpeed" FontSize="40" Foreground="LightGreen" FontStretch="Condensed" FontStyle="Italic" FontWeight="Bold" Text="Teddy" Margin="315,0,-315.2,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <Button Click="SpeedUp" FontSize="40" Background="CadetBlue" FontWeight="Black" Margin="704,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">SpeedUp</Button>
+                <Button FontSize="40" Foreground="Peru" Click="SpeedDown" Background="OldLace"  FontWeight="Bold" Margin="453,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">SpeedDown</Button>
+            </RelativePanel>
+
+            <TextBox Name="Apple" FontSize="30" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" Text="Apex"></TextBox>
+        </StackPanel>
+        <TextBlock Text="Cock Sucker!"
+               FontWeight="ExtraBold"
+               Foreground="DarkOliveGreen"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Top"
+               FontSize="30" />
+    </SwapChainPanel>
+
+    <Page.BottomAppBar>
+        <AppBar x:Name="bottomAppBar" Padding="10,0,10,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                      Click="AppBarButton_Click"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
